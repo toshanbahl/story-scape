@@ -1,0 +1,11 @@
+[theme]
+base = "light"
+primaryColor = "#E8651A"
+backgroundColor = "#FDF8F3"
+secondaryBackgroundColor = "#F6EBDF"
+textColor = "#2C1A0E"
+baseRadius = "8px"
+baseFontSize = 16
+
+[server]
+maxUploadSize = 10
