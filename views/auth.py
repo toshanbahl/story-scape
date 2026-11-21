@@ -29,10 +29,13 @@ def show():
                 st.error("Please enter your name, a valid email and a password of 8+ characters.")
             else:
                 try:
-                    get_client().auth.sign_up({
+                    res = get_client().auth.sign_up({
                         "email": email.strip(), "password": password,
                         "options": {"data": {"display_name": name.strip()}},
                     })
+                    if res.session:  # email confirmation is off in Supabase: log straight in
+                        st.session_state.user = res.user
+                        st.rerun()
                     st.success("Account created! Check your email to confirm, then log in.")
                 except Exception as e:
                     st.error(f"Could not create account: {e}")
