@@ -19,7 +19,13 @@
 Pages needed to jump to each other, e.g. the Home button opening Add Memory, but `st.switch_page` needs the page object. Fix: `app.py` stores all pages in `st.session_state.pages`.
 
 ## Change from plan
-None.
+**Visual redesign (after the app worked).** I asked the AI to restyle the UI to look like a reference site I liked (big heavy headings, soft coloured glow, outlined inputs, solid dark buttons) while keeping my guidelines. Changes:
+- **Inter** font, 800-weight headings with tight letter-spacing.
+- Soft **orange radial-gradient glow** on the cream background (decoration only).
+- Inputs and cards have a dark outline; primary buttons are solid dark brown (#2C1A0E) with cream text, about 16:1 contrast, better than orange buttons.
+- Kept: 16px body text, 8px radius, orange as the accent colour.
+- Problem: after the restyle, text boxes were only 36px tall (Streamlit renamed its input elements). Fix: set `min-height: 44px` on inputs directly, checked by measuring in the browser (inputs 44px, main button 52px).
+- Screenshot: before vs after of the login page.
 
 ## Screenshots
 1. The navbar on the Home page.

@@ -2,10 +2,13 @@
 base = "light"
 primaryColor = "#E8651A"
 backgroundColor = "#FDF8F3"
-secondaryBackgroundColor = "#F6EBDF"
+secondaryBackgroundColor = "#FFFFFF"
 textColor = "#2C1A0E"
 baseRadius = "8px"
 baseFontSize = 16
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+borderColor = "#2C1A0E"
+showWidgetBorder = true
 
 [server]
 maxUploadSize = 10
