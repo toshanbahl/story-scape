@@ -17,8 +17,8 @@ def show():
                 res = get_client().auth.sign_in_with_password({"email": email.strip(), "password": password})
                 st.session_state.user = res.user
                 st.rerun()
-            except Exception:
-                st.error("Wrong email or password, or your email is not confirmed yet.")
+            except Exception as e:  # Supabase says why: "Invalid login credentials" or "Email not confirmed"
+                st.error(f"Could not log in: {e}")
 
     with signup_tab, st.form("signup"):
         name = st.text_input("Your name")
